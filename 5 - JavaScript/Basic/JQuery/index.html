@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $("#hide").click(function(){
+        //         $("p").hide();
+        //     });
+        //     $("#show").click(function(){
+        //         $("p").show();
+        //     });
+        // });
+        
+    $(document).ready(function(){
+        $("#in1").keypress(function(event){
+            $("#d1").html("Key: " + event.which);
+        });
+    });
+
+        
+    </script>
+</head>
+<body>
+
+    <!-- <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button> -->
+    Enter : <input id="in1" type="text">
+    <div id="d1">D1</div>
+</body>
+</html>
