@@ -9,4 +9,4 @@ router.post('/sleep', function(req, res) {
   res.send('cat sleep')
 })
 
-module.exports = router;
+module.exports = router; // export router variable so that it can be imported and used in other files.
