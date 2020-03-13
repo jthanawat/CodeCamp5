@@ -1,5 +1,5 @@
-const express = require('express') // Import express module
-const app = express(); // Create express app
+const express = require('express') // Import express module ; require = importing (build-in node function)
+const app = express(); // Creating new express app by using express function and assigning app variable
 
 // Create ตัวที่ listen Get methods ที่ path '/'
 app.get('/', function(req, res) {
