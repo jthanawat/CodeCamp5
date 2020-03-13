@@ -1,33 +1,33 @@
-// const fs = require('fs');
+const fs = require('fs');
 
-// console.log(typeof fs);
+console.log(typeof fs);
 
-// fs.writeFileSync('CoDeCaMp.txt','Hello, World');
+fs.writeFileSync('CoDeCaMp.txt','Hello, World');
 
-// let content = fs.readFileSync('CoDeCaMp.txt', {
-//     encoding: 'utf-8'
-// });
-// console.log(content);
-
-
-// function mal(a, b, callbackFunction) {
-//     callbackFunction(a * b)
-// }
-
-// mal(2, 3,(result) => {
-//     console.log(result);
-// })
+let content = fs.readFileSync('CoDeCaMp.txt', {
+    encoding: 'utf-8'
+});
+console.log(content);
 
 
-// function max(a, b, callbackFunction) {
-//     if(a > b) {
-//         callbackFunction(a)
-//     } else {
-//         callbackFunction(b)
-//     }
-// }
+function mal(a, b, callbackFunction) {
+    callbackFunction(a * b)
+}
 
-// max(2, 3,(result) => {
-//     console.log(result);
-// })
+mal(2, 3,(result) => {
+    console.log(result);
+})
+
+
+function max(a, b, callbackFunction) {
+    if(a > b) {
+        callbackFunction(a)
+    } else {
+        callbackFunction(b)
+    }
+}
+
+max(2, 3,(result) => {
+    console.log(result);
+})
 
