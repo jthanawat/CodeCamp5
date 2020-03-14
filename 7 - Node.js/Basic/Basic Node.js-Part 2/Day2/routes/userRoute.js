@@ -38,7 +38,7 @@ router.delete('/deleteUser', function(req, res) {
   res.send(String(usersList.length))
 })
 
-// router.put('/updateuser', function(req, res) {
+// router.put('/updateUser', function(req, res) {
 //   usersList = usersList.map(user => {
 //     if(user.id === req.params.id) {
 //       return {
