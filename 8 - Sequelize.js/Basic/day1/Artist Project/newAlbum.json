@@ -1,0 +1,12 @@
+{
+  "name": "John Mayer",
+  "phoneNO": "0123456789",
+  "addr": "Bangkok Thailand",
+	"album": {
+    "name": "Kleenex",
+    "release_date": "2020-01-02"
+  },
+  "song": {
+    "name": "Firework"
+  }
+}
