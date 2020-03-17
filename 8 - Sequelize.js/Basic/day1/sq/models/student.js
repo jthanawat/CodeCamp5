@@ -5,9 +5,25 @@ module.exports = (sequelize, DataTypes) => {
     },
     year: {
       type: DataTypes.INTEGER
+    },
+    point: {
+      type: DataTypes.INTEGER
     }
   })
+  // * one-to-one *
+  // student.associate = models => {
+  //   student.hasOne(models.teacher);
+  // }
 
+  // * one-to-many *
+  // student.associate = models => {
+  //   student.belongsTo(models.teacher);
+  // }
 
-  return student; 
+  // * many-to-many *
+  student.associate = models => {
+    student.belongsToMany(models.teacher, { through: 'TeacherStudent' })
+  }
+
+  return student;
 }
