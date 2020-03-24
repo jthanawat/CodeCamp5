@@ -31,6 +31,8 @@ function App() {
   let arr1 = arr.map(item => <tr>
     <td>{item.point}</td>
     <td>{item.grade}</td>
+    
+    <button onClick={(index) => {arr.filter((item, indexAr) => index !== indexArr ?item : false)}}> delete </button>
     </tr>)
 
   return (
