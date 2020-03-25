@@ -24,8 +24,8 @@ console.log(`hello ${name}`);     // hello Codecamp
 
 // Exercise 2
 let myName, myAge, myAddress;
-name = 'Thanawat';
-age = '24';
-address = 'Bangkhen, Bangkok, Thailand';
+myName = 'Thanawat';
+myAge = '24';
+myAddress = 'Bangkhen, Bangkok, Thailand';
 let myBio = `My name is ${myName}. \nI am ${myAge}. \nI live in ${myAddress}`;
 console.log(myBio);
