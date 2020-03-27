@@ -41,6 +41,7 @@ export default class Homepage extends Component {
         <Link to="/resume"> Resume page </Link>
         <Link to="/app"> App </Link>
         <Link to="/facebook"> Facebook </Link>
+        <Link to="/login"> Log-in </Link>
 
       </div >
     )

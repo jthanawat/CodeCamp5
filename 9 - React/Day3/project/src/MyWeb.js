@@ -5,6 +5,7 @@ import Resume from './Resume'
 import Facebook from './Facebook'
 import App from './App'
 import 'antd/dist/antd.css';
+import Login from './Login'
 
 export default class MyWeb extends Component {
   render() {
@@ -15,6 +16,9 @@ export default class MyWeb extends Component {
 
         <Route path="/facebook" component={Facebook} />
         <Route path="/app" component={App} />
+        
+        <Route path="/login" component={Login} />
+
       </Switch>
     )
   }
