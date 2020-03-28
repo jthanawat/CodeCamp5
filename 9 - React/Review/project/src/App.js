@@ -56,7 +56,7 @@ class App extends React.Component {
 
           <br />
           <button onClick={this.changeColor} style={{ height: "50px", width: "300px", fontSize: "18px" }}>
-            Color Change
+            Colors Change
           </button>
           <br />
           <div style={{ backgroundColor: colors[index], height: "100px", width: "100px", margin: "auto" }}> </div>
