@@ -6,6 +6,7 @@ class App extends React.Component {
     super()
     this.state = {
       visible: true,
+      index: 0
     }
   }
 
@@ -17,8 +18,22 @@ class App extends React.Component {
     })
   }
 
+  // visibleOnClick = () => {
+  //   this.setState({
+  //     visible2: !this.state.visible
+  //   })
+  // }
+
+  changeColor = () => {
+    this.setState({
+      index: (this.state.index + 1) % 3
+    })
+  }
+
   render() {
     const visible = this.state.visible
+    const index = this.state.index;
+    const colors = ['red', 'green', 'yellow'] // 0 = red, 1 = green, 2 = yellow
 
     return (
       <>
@@ -38,8 +53,15 @@ class App extends React.Component {
               Hello, World
             </div>
             : null}
+
+          <br />
+          <button onClick={this.changeColor} style={{ height: "50px", width: "300px", fontSize: "18px" }}>
+            Color Change
+          </button>
+          <br />
+          <div style={{ backgroundColor: colors[index], height: "100px", width: "100px", margin: "auto" }}> </div>
+
         </div>
-        <br />
       </>
     )
   }
