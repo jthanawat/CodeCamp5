@@ -38,6 +38,7 @@ class App extends React.Component {
     return (
       <>
         <div className="App">
+
           <p> 1st React Review </p>
 
           This is the Content.
@@ -58,6 +59,7 @@ class App extends React.Component {
           <button onClick={this.changeColor} style={{ height: "50px", width: "300px", fontSize: "18px" }}>
             Colors Change
           </button>
+
           <br />
           <div style={{ backgroundColor: colors[index], height: "100px", width: "100px", margin: "auto" }}> </div>
 
