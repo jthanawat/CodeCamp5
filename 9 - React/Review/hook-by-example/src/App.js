@@ -15,23 +15,31 @@ function App() {
     <div className="App">
       <h1> Welcome to Thailand </h1>
       <br />
-      <Link to="/about">About </Link>
-      <br />
-      <Link to="/map">Map</Link>
-      <br />
-      <Link to="/home">Home</Link>
-      <br />
-      <br />
-      <br />
-      <Switch>
-        <Route exact path="/" component={Home} />
+      <TabComponent defaultMenu="CC">
+        <Tab title="GG"> Google </Tab>
+        <Tab title="YH"> Yahoo </Tab>
+        <Tab title="FB"> Facebook </Tab>
+        <Tab title="CC"> Codecamp </Tab>
+      </TabComponent>
+
+
+      {/* <Link to="/about">About </Link> */}
+      {/* <br /> */}
+      {/* <Link to="/map">Map</Link> */}
+      {/* <br /> */}
+      {/* <Link to="/home">Home</Link> */}
+      {/* <br /> */}
+      {/* <br /> */}
+      {/* <br /> */}
+      {/* <Switch> */}
+        {/* <Route exact path="/" component={Home} /> */}
         {/* <Route path="/index" component={Home} />  */}
-        <Route exact path="/about" component={About} />
-        <Route exact path="/map" component={Map} />
-        <Route exact path="/profile/:id" component={Profile} />
-        <Route exact path="/error" component={NotFound} />
-        <Redirect to="/error" />
-      </Switch>
+        {/* <Route exact path="/about" component={About} /> */}
+        {/* <Route exact path="/map" component={Map} /> */}
+        {/* <Route exact path="/profile/:id" component={Profile} /> */}
+        {/* <Route exact path="/error" component={NotFound} /> */}
+        {/* <Redirect to="/error" /> */}
+      {/* </Switch> */}
     </div>
   );
 }
