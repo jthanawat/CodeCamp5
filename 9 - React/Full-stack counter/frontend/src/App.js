@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import axios from "./config/axios"
+import './App.css';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -14,7 +13,7 @@ function App() {
   useEffect(()=>{
     fetchData();
   }, []);
-  
+
   const onClickSetCounter = async (counter) => {
     const body = {
       counter,
