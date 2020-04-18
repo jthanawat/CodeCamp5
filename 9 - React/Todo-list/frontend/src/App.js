@@ -41,11 +41,7 @@ function App() {
 
       <div>
         {/* <div onCLick = {e => console.log(e.target.innerText)}> content</div> */}
-        <input
-          value={input}
-          onChange={inputValue}
-        />
-
+        <input value={input} onChange={inputValue} />
         <button onClick={add}> Add </button>
       </div>
     </div>
