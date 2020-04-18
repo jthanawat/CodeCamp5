@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  font-family: monospace;
+  border: 1px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 30px
+}
+
+.App > div {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+input {
+  width: 300px;
+  margin-right: 20px;
+  font-size: 16px;
+  margin: 20px
+}
+
+button {
+  font-size: 16px;
+}
+
+ul li {
+  font-size: 20px;
+  list-style-type: none;
+  margin: 20px 20px;
+}
+
+
