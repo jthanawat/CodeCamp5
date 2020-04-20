@@ -1,4 +1,17 @@
-//useState: คือ function เอาไว้กำหนด state และสร้าง function ที่เอาไว้เปลี่ยนค่าใน state 
+//state mount/update/unmount 
+// state = var state, let state ตัวแปรตัวหนึ่ง ที่เก็บค่าข้อมูล ลักษณะประเภท ค่าที่มีการแสดงผล การเปลี่ยนแปลง 
+// class state = {property: value, property: value}
+
+// this.state.property 
+
+//const [state, setState] = useState(...)
+//state =  property 
+//... = value
+//
+
+// react > show display/web => render (render = การสร้างหน้าเว็บขึ้นมาใหม่ อิงจาก state )
+
+//useState: คือ function เอาไว้กำหนด state (ตัวเริ่มต้น) และสร้าง function ที่เอาไว้เปลี่ยนค่าใน state 
 // ตัวแปรตัวแรก เป็นค่าตั้งต้นเท่ากับใน useState เช่น todoList, ตัวแปรตัวที่สองสร้าง function ก็คือ setTodoList รับค่าแทนค่า useState
 
 //useEffect: จัดการ life cycle ของ react eg. didmount update unmount
@@ -19,24 +32,32 @@ function App() {
   const [input, setInput] = useState("");
 
   const inputValue = e => {
-    console.log(e.target.value)
-    setInput (e.target.value)
+    // console.log(e.target)
+    setInput(e.target.value)
     // e.target = <input onChange={inputValue} value="aaa" />
     // e.target.value = "aaa"
   }
 
   let add = () => {
-    setTodoList([...todoList, {id: todoList.length + 1 , input: input}])
+    setTodoList([...todoList, { id: todoList.length + 1, text: input }])
     setInput("")
+  }
+
+  let deleteList = (id, index) => { 
+    console.log({id:id})
+    console.log({index})
   }
 
   return (
     <div className="App">
       <div> Todo List </div>
       <ul>
-        {todoList.map((obj) => (
-          <li key={obj.id}> {obj.input} </li>
-        ))}
+        {/* รับ index มาจาก map */}
+        {todoList.map((obj,index) => {
+
+          const id = obj.id
+          return (<li key={obj.id}> {obj.text} <button onClick={ () => deleteList (id, index)}> Delete </button></li>)
+        })}
       </ul>
 
       <div>
