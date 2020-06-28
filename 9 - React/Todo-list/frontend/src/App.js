@@ -43,20 +43,48 @@ function App() {
     setInput("")
   }
 
-  let deleteList = (id, index) => { 
-    console.log({id:id})
-    console.log({index})
+  let deleteList = (id, index) => {
+    console.log({ id: id })
+    console.log({ index })
+    let deleteInput = [...todoList].filter((item) => item.id !== id)
+    console.log(deleteInput)
+    let a = deleteInput.filter((item) => item.id !== id)
+    console.log(a)
+    console.log(deleteInput)
+    // let deleteInput = [...todoList]
+    // console.log(deleteInput)
+    // let a = deleteInput.splice(index, 1)
+    // console.log(a)
+    // console.log(deleteInput)
+    // setTodoList(deleteInput)
   }
+
+  let editList = (id, index) => {
+    let editInput = prompt("New input")
+    let b = [...todoList]
+    b.splice(index, 1, { id: id, text: editInput })
+    setTodoList(b)
+    //   let b = [...todoList].map((item) => {
+    //     if (item.id === id) {
+    //       return {id: item.id, text: editInput};
+    //     } else {
+    //       return item;
+    //     }
+    //   })
+    //   setTodoList(b)
+  }
+
 
   return (
     <div className="App">
       <div> Todo List </div>
       <ul>
         {/* รับ index มาจาก map */}
-        {todoList.map((obj,index) => {
+        {todoList.map((obj, index) => {
 
           const id = obj.id
-          return (<li key={obj.id}> {obj.text} <button onClick={ () => deleteList (id, index)}> Delete </button></li>)
+          return (<li key={obj.id}> {obj.text} <button onClick={() => deleteList(id, index)}> Delete </button>
+            <button onClick={() => editList(id, index)}> Edit </button></li>)
         })}
       </ul>
 
