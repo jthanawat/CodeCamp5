@@ -12,10 +12,10 @@ const store = createStore(reducer)
 
 ReactDOM.render(
   <div>
-  {/* // <Provider store={store}> */}
-    {/* <App /> */}
-    <Counter />
-  {/* // </Provider> */}
+  <Provider store={store}>
+    <App />
+    {/* <Counter /> */}
+   </Provider>
   </div>
   ,
   document.getElementById('root')
