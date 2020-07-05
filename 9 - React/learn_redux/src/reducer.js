@@ -19,6 +19,9 @@ const reducer = (state = initialState, action) => {
     case "ADD_PERSON":
       const newObj = [...state.arrObj, {name: "John"}];
       return {...state, arrObj: newObj}
+      case "ADD_HISTORY":
+      const history = [...state.arrObj, {name: action.name, email: action.email}]
+      return {...state, arrObj: history}
     default:
       return state;
   }
