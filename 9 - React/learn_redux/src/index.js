@@ -6,13 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux'
 import reducer from './reducer'
 import {Provider} from 'react-redux'
+import Counter from './Counter_redux'
 
 const store = createStore(reducer)
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <div>
+  {/* // <Provider store={store}> */}
+    {/* <App /> */}
+    <Counter />
+  {/* // </Provider> */}
+  </div>
   ,
   document.getElementById('root')
 );
