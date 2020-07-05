@@ -3,15 +3,14 @@ import './App.css';
 import { connect } from 'react-redux';
 
 class App extends React.Component {
-  state = {
-    name: "",
-    email: ""
-  }
+  // state = {
+  //   name: "",
+  //   email: ""
+  // }
 
   AddHistory = (e) => {
     e.preventDefault();
-    this.props.addHistory({ type: "ADD_HISTORY", name: this.state.name, email: this.state.email })
-    this.setState({ name: "", email: "" })
+    this.props.addHistory({ type: "ADD_HISTORY", name: this.props.state.textName, email: this.props.state.textEmail })
   }
 
   render() {
@@ -35,8 +34,8 @@ class App extends React.Component {
           </ul>
 
           <form onSubmit={this.AddHistory}>
-            <input type="text" placeholder="name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} ></input>
-            <input type="text" placeholder="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })}></input>
+            <input type="text" placeholder="name" value={this.props.state.textName} onChange={(e) => this.props.textName({type: "TEXT_NAME", textName: e.target.value })} ></input>
+            <input type="text" placeholder="email" value={this.props.state.textEmail} onChange={(e) => this.props.textEmail({type: "TEXT_EMAIL", textEmail: e.target.value })}></input>
             <button type="submit">Submit</button>
           </form>
 
@@ -59,7 +58,9 @@ const mapDispatchToProps = dispatch => {
     reset: (action) => dispatch(action),
     addNum: (action) => dispatch(action),
     addPerson: (action) => dispatch(action),
-    addHistory: (action) => dispatch(action)
+    addHistory: (action) => dispatch(action),
+    textName: (action) => dispatch(action),
+    textEmail: (action) => dispatch(action)
   }
 }
 
