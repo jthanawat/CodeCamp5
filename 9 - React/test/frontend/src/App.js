@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Article from './Components/Article';
+import { Route, Switch, NavLink, Link } from 'react-router-dom'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +48,7 @@ class App extends React.Component {
 
     console.log("[App.js] Render")
     return (
+      
       <div className="App" >
         <button onClick={this.onChangeVisible}> Show/Hide</button>
         <br />
