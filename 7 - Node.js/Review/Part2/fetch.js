@@ -15,7 +15,7 @@ fetch(url)
   })
   .then((data) => {
     d = data;
-    console.log(data)
+    console.log(d)
   })
   .catch((err) => {
     console.log('Incomplete fetct : ' + err)
